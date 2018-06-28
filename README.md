@@ -1,2 +1,2 @@
 # python-problem-solving
-A collection of problems and my attempts at clean solutions.
+A collection of Python problems and my attempts at clean solutions.
