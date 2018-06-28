@@ -7,6 +7,7 @@ ls = [i for i in range(500)]
 BATCH_SIZE = 128
 
 2d_ls = []
+batch = 1
 while batch < len(ls) // BATCH_SIZE + 2:
     start = (batch - 1) * BATCH_SIZE
     end = batch * BATCH_SIZE
