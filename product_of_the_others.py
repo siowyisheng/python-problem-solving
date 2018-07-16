@@ -9,6 +9,5 @@ def product_of_others(ls):
     for i in ls:
         ls2 = ls.copy()
         ls2.remove(i)
-        ls_without_i_element = ls2
-        new_ls.append(np.prod(ls_without_i_element))
+        new_ls.append(np.prod(ls2))
     return new_ls
