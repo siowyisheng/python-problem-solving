@@ -1,0 +1,16 @@
+[
+  "any_two_add_up_to_k_test.py::test_any_two_add_up[ls0-17-True]",
+  "any_two_add_up_to_k_test.py::test_any_two_add_up[ls1-18-True]",
+  "any_two_add_up_to_k_test.py::test_any_two_add_up[ls2-50-False]",
+  "any_two_add_up_to_k_test.py::test_any_two_add_up[ls3-4-True]",
+  "any_two_add_up_to_k_test.py::test_any_two_add_up[ls4-107-True]",
+  "any_two_add_up_to_k_test.py::test_any_two_add_up[ls5-1997-True]",
+  "merge_and_sort_sorted_lists_test.py::test_merge_and_sort_sorted_lists[lists0-expected0]",
+  "merge_and_sort_sorted_lists_test.py::test_merge_and_sort_sorted_lists[lists1-expected1]",
+  "product_of_the_others_test.py::test_product_of_others[ls0-expected0]",
+  "product_of_the_others_test.py::test_product_of_others[ls1-expected1]",
+  "product_of_the_others_test.py::test_product_of_others[ls2-expected2]",
+  "product_of_the_others_test.py::test_product_of_others[ls3-expected3]",
+  "separate_into_batches_test.py::test_separate_into_batches[ls0-128-expected0]",
+  "separate_into_batches_test.py::test_separate_into_batches[ls1-128-expected1]"
+]
