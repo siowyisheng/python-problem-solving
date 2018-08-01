@@ -1,0 +1,7 @@
+{
+  "serialize_tree_to_string_test.py::test_serialize_tree_to_string": true,
+  "serialize_tree_to_string_test.py::test_serialize_tree_to_string[ls0-expected0]": true,
+  "serialize_tree_to_string_test.py::test_serialize_tree_to_string[ls1-expected1]": true,
+  "serialize_tree_to_string_test.py::test_serialize_tree_to_string[ls2-expected2]": true,
+  "serialize_tree_to_string_test.py::test_serialize_tree_to_string[ls3-expected3]": true
+}

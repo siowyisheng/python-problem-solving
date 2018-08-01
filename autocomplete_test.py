@@ -4,8 +4,11 @@
 # Hint: Try preprocessing the dictionary into a more efficient data structure to
 # speed up queries.
 
+import pytest
+from autocomplete import *
 
-def autocomplete(q, set):
-    letters = len(q)
-    matches = [s for s in set if s[:letters] == q]
-    return matches
+
+@pytest.mark.parametrize("q,set,expected",
+                         [('de', ('dog', 'deer', 'deal'), ['deer', 'deal'])])
+def test_autocomplete(q, set, expected):
+    assert autocomplete(q, set) == expected
