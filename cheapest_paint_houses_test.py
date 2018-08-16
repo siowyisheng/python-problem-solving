@@ -6,10 +6,12 @@
 # to build the nth house with kth color, return the minimum cost which achieves
 # this goal.
 
+import pytest
+from cheapest_paint_houses import *
 
-def minimum_cost(matrix):
-    min_cost = 0
-    # houses = len(matrix)
-    for house in matrix:
-        min_cost += min(house)
-    return min_cost
+
+@pytest.mark.parametrize('input,expected',
+                         [([[1, 2], [2, 1]], 2),
+                          ([[1, 5, 7], [1, 3, 2], [2, 2, 2], [1, 5, 6]], 6)])
+def test_minimum_cost(input, expected):
+    assert minimum_cost(input) == expected
