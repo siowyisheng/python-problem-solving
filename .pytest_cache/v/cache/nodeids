@@ -1,4 +1,6 @@
 [
-  "longest_file_path_test.py::test_longest_file_path[dir\\n\\tsubdir1\\n\\t\\tfile1.ext\\n\\t\\tsubsubdir1\\n\\tsubdir2\\n\\t\\tsubsubdir2\\n\\t\\t\\tfile2.ext-32]",
-  "longest_file_path_test.py::test_longest_file_path[dir\\n\\tsubdir1\\n\\tsubdir2\\n\\t\\tfile.ext-20]"
+  "product_of_the_others_test.py::test_product_of_others[ls0-expected0]",
+  "product_of_the_others_test.py::test_product_of_others[ls1-expected1]",
+  "product_of_the_others_test.py::test_product_of_others[ls2-expected2]",
+  "product_of_the_others_test.py::test_product_of_others[ls3-expected3]"
 ]

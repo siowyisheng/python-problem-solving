@@ -1,0 +1,18 @@
+[
+  "any_two_add_up_to_k_test.py::test_any_two_add_up[ls0-17-True]",
+  "any_two_add_up_to_k_test.py::test_any_two_add_up[ls1-18-True]",
+  "any_two_add_up_to_k_test.py::test_any_two_add_up[ls2-50-False]",
+  "any_two_add_up_to_k_test.py::test_any_two_add_up[ls3-4-True]",
+  "any_two_add_up_to_k_test.py::test_any_two_add_up[ls4-107-True]",
+  "any_two_add_up_to_k_test.py::test_any_two_add_up[ls5-1997-True]",
+  "autocomplete_test.py::test_autocomplete[de-set0-expected0]",
+  "balanced_brackets_test.py::test_balanced_brackets[([])[]({})-True]",
+  "balanced_brackets_test.py::test_balanced_brackets[([)]-False]",
+  "balanced_brackets_test.py::test_balanced_brackets[((()-False]",
+  "cons_car_cdr_test.py::test_car[pair-3]",
+  "cons_car_cdr_test.py::test_cdr[pair-4]",
+  "longest_file_path_test.py::test_longest_file_path[dir\\n\\tsubdir1\\n\\t\\tfile1.ext\\n\\t\\tsubsubdir1\\n\\tsubdir2\\n\\t\\tsubsubdir2\\n\\t\\t\\tfile2.ext-32]",
+  "longest_file_path_test.py::test_longest_file_path[dir\\n\\tsubdir1\\n\\tsubdir2\\n\\t\\tfile.ext-20]",
+  "merge_and_sort_sorted_lists_test.py::test_merge_and_sort_sorted_lists[lists0-expected0]",
+  "merge_and_sort_sorted_lists_test.py::test_merge_and_sort_sorted_lists[lists1-expected1]"
+]
