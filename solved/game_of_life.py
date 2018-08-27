@@ -18,7 +18,6 @@
 from __future__ import print_function
 
 
-# simplify coordinates somewhere?
 def run_steps(board, steps):
     board = simplify_coordinates(board)
     if not steps:
