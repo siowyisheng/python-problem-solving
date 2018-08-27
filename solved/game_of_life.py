@@ -20,12 +20,26 @@ from __future__ import print_function
 
 # simplify coordinates somewhere?
 def run_steps(board, steps):
-    str_board = stringify(board)
+    board = simplify_coordinates(board)
+    if not steps:
+        str_board = stringify(board)
+        print(str_board)
     for i in range(steps):
         board = generate_next_board(board)
+        str_board = stringify(board)
         print(str_board)
-    if not steps:
-        print(str_board)
+
+
+def simplify_coordinates(board):
+    if not board:
+        return []
+    x_coords = [cell[0] for cell in board]
+    y_coords = [cell[1] for cell in board]
+    min_x, min_y = min(x_coords), min(y_coords)
+    new_x_coords = [x - min_x for x in x_coords]
+    new_y_coords = [y - min_y for y in y_coords]
+    board = list(zip(new_x_coords, new_y_coords))
+    return board
 
 
 def get_width_height(board):
@@ -37,8 +51,10 @@ def get_width_height(board):
 
 
 def stringify(board):
+    if not board:
+        return '\n'
     width, height = get_width_height(board)
-    s = ''
+    s = '\n'
     for j in range(height):
         line = ''
         for i in range(width):
@@ -53,27 +69,32 @@ def stringify(board):
 
 def generate_next_board(board):
     width, height = get_width_height(board)
-    candidate_for_life = set()
+    candidates_for_life = set()
     for live_cell in board:
         x, y = live_cell
         for i in (-1, 0, 1):
             for j in (-1, 0, 1):
-                candidate_for_life += (x + i, y + j)
+                candidates_for_life.add((x + i, y + j))
     new_board = []
-    for cell in candidate_for_life:
-        n = count_live_neighbours(cell)
-        if cell in board and n in (2, 3):
-            new_board.append(cell)
-        if cell not in board and n == 3:
-            new_board.append(cell)
+    for cell in candidates_for_life:
+        resolve_life(cell, board, new_board)
+    return new_board
+
+
+def resolve_life(cell, board, new_board):
+    n = count_live_neighbours(cell, board)
+    if cell in board and n in (2, 3):
+        new_board.append(cell)
+    if cell not in board and n == 3:
+        new_board.append(cell)
 
 
 def count_live_neighbours(cell, board):
-    pass
-
-
-# Any live cell with less than two live neighbours dies.
-# Any live cell with two or three live neighbours remains living.
-# Any live cell with more than three live neighbours dies.
-# Any dead cell with exactly three live neighbours becomes a live cell.
-# A cell neighbours another cell if it is horizontally, vertically, or diagonally adjacent.
+    x, y = cell
+    neighbours = []
+    for x_shift in (-1, 0, 1):
+        for y_shift in (-1, 0, 1):
+            neighbours.append((x + x_shift, y + y_shift))
+    neighbours.remove((x, y))
+    live_neighbours = [cell for cell in neighbours if cell in board]
+    return len(live_neighbours)

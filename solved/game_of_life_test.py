@@ -20,13 +20,17 @@ import pytest
 from game_of_life import *
 
 
-@pytest.mark.parametrize('board,steps,expected',
-                         [([(0, 0)], 0, '*\n'), ([(0, 0), (1, 0)], 0, '**\n'),
-                          ([(0, 0),
-                            (0, 1)], 0, '*\n*\n'), ([(0, 0), (0, 1), (1, 0),
-                                                     (1, 1)], 0, '**\n**\n'),
-                          ([(1, 0),
-                            (0, 1)], 0, '*.\n.*\n'), ([(0, 0)], 1, '')])
+@pytest.mark.parametrize(
+    'board,steps,expected',
+    [([(0, 0)], 0, '*\n\n'),
+     ([(0, 0), (1, 0)], 0, '**\n\n'),
+     ([(0, 0), (0, 1)], 0, '*\n*\n\n'),
+     ([(0, 0), (0, 1), (1, 0), (1, 1)], 0, '**\n**\n\n'),
+     ([(1, 0), (0, 1)], 0, '*.\n.*\n\n'),
+     ([(0, 0)], 1, '\n\n'),
+     ([(0, 0), (1, 0), (0, 1)], 1, '**\n**\n\n'),
+     ([(0, 0), (1, 0), (0, 1)], 3, '**\n**\n\n**\n**\n\n**\n**\n\n'),
+     ([(5, 5), (6, 5), (5, 6)], 3, '**\n**\n\n**\n**\n\n**\n**\n\n')])  # yapf: disable
 def test_run_steps(board, steps, expected, capsys):
     run_steps(board, steps)
     captured = capsys.readouterr()
