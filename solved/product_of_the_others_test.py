@@ -5,10 +5,10 @@ import pytest
 from product_of_the_others import *
 
 
-@pytest.mark.parametrize(
-    "ls,expected", [([1, 2, 3, 4, 5], [120, 60, 40, 30, 24]),
-                    ([0, 2, 3, 4, 5], [120, 0, 0, 0, 0]),
-                    ([-1, 2, 3, 4, 5], [120, -60, -40, -30, -24]),
-                    ([2 for i in range(50)], [2**49 for i in range(50)])])
+@pytest.mark.parametrize("ls,expected",
+                         [([1, 2, 3, 4, 5], [120, 60, 40, 30, 24]),
+                          ([0, 2, 3, 4, 5], [120, 0, 0, 0, 0]),
+                          ([-1, 2, 3, 4, 5], [120, -60, -40, -30, -24]),
+                          ([2 for i in range(50)], [2**49 for i in range(50)])]) # yapf: disable
 def test_product_of_others(ls, expected):
     assert product_of_others(ls) == expected

@@ -8,7 +8,8 @@ import pytest
 from balanced_brackets import *
 
 
-@pytest.mark.parametrize("s,expected", [("([])[]({})", True), ("([)]", False),
-                                        ("((()", False)])
+@pytest.mark.parametrize("s,expected", [("([])[]({})", True),
+                                        ("([)]", False),
+                                        ("((()", False)]) # yapf: disable
 def test_balanced_brackets(s, expected):
     assert balanced_brackets(s) == expected

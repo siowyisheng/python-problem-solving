@@ -6,9 +6,11 @@ from any_two_add_up_to_k import *
 
 
 @pytest.mark.parametrize(
-    "ls,k,expected", [([10, 15, 3, 7], 17, True), ([10, 15, 3, 7], 18, True),
-                      ([10, 15, 3, 7], 50, False), ([-1, 3, 5, 7], 4, True),
+    "ls,k,expected", [([10, 15, 3, 7], 17, True),
+                      ([10, 15, 3, 7], 18, True),
+                      ([10, 15, 3, 7], 50, False),
+                      ([-1, 3, 5, 7], 4, True),
                       ([i for i in range(100)], 107, True),
-                      ([i for i in range(1000)], 1997, True)])
+                      ([i for i in range(1000)], 1997, True)]) # yapf: disable
 def test_any_two_add_up(ls, k, expected):
     assert any_two_add_up(ls, k) == expected

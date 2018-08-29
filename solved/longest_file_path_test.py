@@ -40,8 +40,8 @@ import pytest
 from longest_file_path import *
 
 
-@pytest.mark.parametrize('filesystem, expected', [(
-    "dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext",
-    32), ("dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext", 20)])
+@pytest.mark.parametrize('filesystem, expected', [
+    ("dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext",32),
+    ("dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext", 20)]) # yapf: disable
 def test_longest_file_path(filesystem, expected):
     assert longest_file_path(filesystem) == expected
