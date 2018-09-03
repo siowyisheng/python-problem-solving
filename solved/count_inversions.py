@@ -9,8 +9,10 @@
 # For example, a sorted list has zero inversions. The array [2, 4, 1, 3, 5] has
 # three inversions: (2, 1), (4, 1), and (4, 3). The array [5, 4, 3, 2, 1] has ten
 # inversions: every distinct pair forms an inversion.
+# ----------------------------------------------------------------------------
 
 
+# this should be faster than O(N^2), since the inner loop is shrinking each time
 def count_inversions(ls):
     total_inversions = 0
     checked_elements = []
