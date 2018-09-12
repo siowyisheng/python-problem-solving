@@ -1,3 +1,6 @@
 [
-  "rand7_with_rand5_test.py::test_rand7"
+  "number_to_base36_test.py::test_to_b36[1-0]",
+  "number_to_base36_test.py::test_to_b36[10-9]",
+  "number_to_base36_test.py::test_to_b36[11-a]",
+  "number_to_base36_test.py::test_to_b36[1764102650123-af350ehl]"
 ]
