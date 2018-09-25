@@ -20,3 +20,14 @@
 #     [0 0 b 0 0]
 #     [0 0 0 0 0]
 #     [b 0 0 0 0]
+
+import pytest
+from bishops_on_board import *
+
+
+@pytest.mark.parametrize('M,bishop_coordinates,expected',
+                         [(5, [(0, 0), (1, 2), (2, 2), (4, 0)], 2)])
+def test_count_bishop_pairs_attacking_each_other(M, bishop_coordinates,
+                                                 expected):
+    assert count_bishop_pairs_attacking_each_other(
+        M, bishop_coordinates) == expected
