@@ -15,7 +15,6 @@
 # from the top-leftmost live cell to bottom-rightmost live cell.
 #
 # You can represent a live cell with an asterisk (*) and a dead cell with a dot (.).
-from __future__ import print_function
 
 
 def run_steps(board, steps):

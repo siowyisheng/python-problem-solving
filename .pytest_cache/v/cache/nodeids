@@ -1,6 +1,8 @@
 [
-  "product_of_the_others_test.py::test_product_of_others[ls0-expected0]",
-  "product_of_the_others_test.py::test_product_of_others[ls1-expected1]",
-  "product_of_the_others_test.py::test_product_of_others[ls2-expected2]",
-  "product_of_the_others_test.py::test_product_of_others[ls3-expected3]"
+  "unsolved/character_mapping_test.py::test_has_mapping[shiftedmessage-tijgsfenfttbhf-True]",
+  "unsolved/character_mapping_test.py::test_has_mapping[abc-bcd-True]",
+  "unsolved/character_mapping_test.py::test_has_mapping[aba-bcd-False]",
+  "unsolved/character_mapping_test.py::test_has_mapping[abc-ddd-False]",
+  "unsolved/character_mapping_test.py::test_has_mapping[abc-bcc-False]",
+  "unsolved/character_mapping_test.py::test_has_mapping[foo-bar-False]"
 ]
