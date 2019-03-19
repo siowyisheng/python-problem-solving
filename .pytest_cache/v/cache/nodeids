@@ -1,8 +1,4 @@
 [
-  "unsolved/character_mapping_test.py::test_has_mapping[shiftedmessage-tijgsfenfttbhf-True]",
-  "unsolved/character_mapping_test.py::test_has_mapping[abc-bcd-True]",
-  "unsolved/character_mapping_test.py::test_has_mapping[aba-bcd-False]",
-  "unsolved/character_mapping_test.py::test_has_mapping[abc-ddd-False]",
-  "unsolved/character_mapping_test.py::test_has_mapping[abc-bcc-False]",
-  "unsolved/character_mapping_test.py::test_has_mapping[foo-bar-False]"
+  "unsolved/no_tests/apply_permutation_to_array_test.py::test_permutate_array[array0-permutation0-expected0]",
+  "unsolved/no_tests/apply_permutation_to_array_test.py::test_permutate_array[array1-permutation1-expected1]"
 ]
